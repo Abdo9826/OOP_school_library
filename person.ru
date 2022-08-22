@@ -6,15 +6,15 @@ class Person
     @id = Time.now.to_f
     @name = name
     @age = age
-    end
+  end
 
   def can_use_services?
     _is_of_age?
-    end
+  end
 
-    private
+  private
 
   def _is_of_age?
     @age >= 18
-    end
+  end
 end
