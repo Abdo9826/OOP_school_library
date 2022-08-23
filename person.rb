@@ -11,6 +11,10 @@ class Person < Nameable
     @age = age
   end
 
+  def correct_name
+    @name
+  end
+
   def can_use_services?
     _is_of_age?
   end
