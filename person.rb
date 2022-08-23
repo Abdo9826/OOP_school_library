@@ -1,10 +1,11 @@
-require './Name.rb'
+require 'nameable'
 
 class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age
 
   def initialize(name, age)
+    super()
     @id = Time.now.to_f
     @name = name
     @age = age
