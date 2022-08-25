@@ -4,7 +4,7 @@
 
 ## Built With
 
-- `Ruby`
+- `Ruby y`
 
 ## Author
 
