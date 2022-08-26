@@ -170,8 +170,8 @@ class App
       puts("#{@people.index(person)}) Name: \"#{person.name}\", Age: #{person.age}")
     end
 
-    person_name = gets.chomp.to_s
-    selected_person = @people[person_name]
+    person_id = gets.chomp.to_i
+    selected_person = @people[person_id]
     puts selected_person
 
     print('Date: ')
@@ -183,15 +183,15 @@ class App
   end
 
   def list_of_rentals
-    print('name of person: ')
-    name = gets.chomp.to_s
+    print('ID of person: ')
+    id = gets.chomp.to_i
     puts('Rentals')
     puts('')
 
     puts 'There is no rentals' if @rentals.length.zero?
 
     @rentals.each do |i|
-      puts "Date: #{i.date}, Book \"#{i.book.title}\" by #{i.book.author}" if i.person.name == name
+      puts "Date: #{i.date}, Book \"#{i.book.title}\" by #{i.book.author}" if i.person.id == id
     end
 
     run
