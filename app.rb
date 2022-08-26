@@ -148,7 +148,7 @@ class App
     puts 'Author:'
     author = gets.chomp
 
-    new_book = Book.new(title, author)
+    new_book = books.new(title, author)
     @book << new_book
 
     puts('Book created successfully')
@@ -183,7 +183,7 @@ class App
   end
 
   def list_of_rentals
-    print('ID of person: ')
+    print('Name of person: ')
     id = gets.chomp.to_i
     puts('Rentals')
     puts('')
@@ -191,7 +191,7 @@ class App
     puts 'There is no rentals' if @rentals.length.zero?
 
     @rentals.each do |i|
-      puts "Date: #{i.date}, Book \"#{i.book.title}\" by #{i.book.author}" if i.person.id == id
+      puts "Date: #{i.date}, Book \"#{i.book.title}\" by #{i.book.author}" if i.person.name == name
     end
 
     run
