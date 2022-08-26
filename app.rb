@@ -183,7 +183,7 @@ class App
   end
 
   def list_of_rentals
-    print('Name of person: ')
+    print('id of person: ')
     id = gets.chomp.to_i
     puts('Rentals')
     puts('')
@@ -191,7 +191,7 @@ class App
     puts 'There is no rentals' if @rentals.length.zero?
 
     @rentals.each do |i|
-      puts "Date: #{i.date}, Book \"#{i.book.title}\" by #{i.book.author}" if i.person.name == name
+      puts "Date: #{i.date}, Book \"#{i.book.title}\" by #{i.book.author}" if i.person.id == id
     end
 
     run
